@@ -9,7 +9,7 @@ TOTAL                                                 247     36    85%
 
 Cambios:
 
->>Explicación de las Nuevas Pruebas
+>> Explicación de las Nuevas Pruebas
 test_make_reservation_room_already_reserved: Prueba que intenta hacer una reserva en una habitación ya reservada.
 test_display_info (Hotel y Customer): Prueba que llama al método display_info para asegurarse de que se ejecuta sin errores.
 test_modify_info (Hotel): Prueba que modifica la información del hotel y verifica que los cambios se hayan aplicado correctamente.

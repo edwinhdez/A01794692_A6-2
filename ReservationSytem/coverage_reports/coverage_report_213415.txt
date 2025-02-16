@@ -6,3 +6,9 @@ ReservationSytem\src\reservation_system.py            165     49    70%   11, 15
 ReservationSytem\tests\test_reservation_system.py      70      1    99%   90
 ---------------------------------------------------------------------------------
 TOTAL                                                 235     50    79%
+
+
+>> Descripcion de resultados:
+ReservationSytem\src\reservation_system.py: Este archivo tiene una cobertura del 70%, lo que indica que hay varias partes del código que no están siendo probadas. 
+ReservationSytem\tests\test_reservation_system.py: Este archivo tiene una cobertura del 99%, lo que es excelente. Solo una línea no fue ejecutada durante las pruebas.
+Cobertura Total: La cobertura total del proyecto es del 79%, lo cual está por debajo del objetivo del 85%. Necesitamos agregar más pruebas unitarias para cubrir las líneas faltantes en reservation_system.py.
