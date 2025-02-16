@@ -1,0 +1,12 @@
+{
+    "name": "Grand Hotel",
+    "location": "New York",
+    "rooms": [
+        101,
+        102,
+        103,
+        104,
+        105
+    ],
+    "reservations": []
+}
