@@ -103,7 +103,28 @@ print("Reservation cancelled")
 1. **reservation_system.py:** Contiene la implementación de las clases abstractas y concretas para el sistema de reservas.
 2. **data/:** Carpeta donde se almacenan los archivos JSON con la información de los hoteles y clientes.
 
-ReservationSytem/ ├── flake8_reports/ │ └── flake8_issues_YYYYMMDD_HHMMSS.txt ├── src/ │ ├── reservation_system.py │ └── utils/ │ └── run_flake8.py └── tests/ └── test_reservation_system.py
+```sh
+ReservationSytem/
+├── flake8_reports/
+│   └── flake8_issues_YYYYMMDD_HHMMSS.txt
+├── pylint_reports/
+│   └── pylint_report_YYYYMMDD_HHMMSS.txt
+├── coverage_reports/
+│   └── coverage_report_YYYYMMDD_HHMMSS.txt
+├── src/
+│   ├── reservation_system.py
+│   └── utils/
+│       └── run_flake8.py
+│       └── run_pylint.py
+│       └── run_coverage.py
+└── tests/
+    └── test_reservation_system.py
+└── data/
+    └── Grand Hotel.json.py
+    └── John Doe.json
+    └── Updated Customer.json
+    └── Updated Hotel.json
+```
 
 ## Requisitos
 
@@ -114,7 +135,7 @@ ReservationSytem/ ├── flake8_reports/ │ └── flake8_issues_YYYYMMDD
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tu_usuario/ReservationSytem.git
+    git clone https://github.com/edwinhdez/A01794692_A6-2/ReservationSytem.git
     cd ReservationSytem
     ```
 
