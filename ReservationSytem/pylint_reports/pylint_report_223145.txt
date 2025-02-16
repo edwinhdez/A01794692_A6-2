@@ -1,0 +1,7 @@
+************* Module ReservationSytem.src.reservation_system
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:123:15: W0718: Catching too general exception Exception (broad-exception-caught)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:257:15: W0718: Catching too general exception Exception (broad-exception-caught)
+
+------------------------------------------------------------------
+Your code has been rated at 9.86/10 (previous run: 8.91/10, +0.95)
+

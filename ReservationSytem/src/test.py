@@ -16,28 +16,32 @@ class AbstractHotel(ABC):
     """
 
     @abstractmethod
-    def make_reservation(self, customer, room_number, check_in, check_out):
+    def make_reservation(self, cust, room_number, check_in, check_out):
         """
         Realiza una reserva en el hotel.
         """
+        pass
 
     @abstractmethod
     def is_room_reserved(self, room_number, check_in, check_out):
         """
         Verifica si una habitación está reservada en un rango de fechas.
         """
+        pass
 
     @abstractmethod
     def cancel_reservation(self, reservation):
         """
         Cancela una reserva en el hotel.
         """
+        pass
 
     @abstractmethod
     def save_to_file(self):
         """
         Guarda la información del hotel en un archivo.
         """
+        pass
 
     @staticmethod
     @abstractmethod
@@ -45,18 +49,21 @@ class AbstractHotel(ABC):
         """
         Carga la información del hotel desde un archivo.
         """
+        pass
 
     @abstractmethod
     def display_info(self):
         """
         Muestra la información del hotel.
         """
+        pass
 
     @abstractmethod
     def modify_info(self, name=None, location=None, rooms=None):
         """
         Modifica la información del hotel.
         """
+        pass
 
 
 class Hotel(AbstractHotel):
@@ -70,11 +77,11 @@ class Hotel(AbstractHotel):
         self.rooms = rooms
         self.reservations = []
 
-    def make_reservation(self, customer, room_number, check_in, check_out):
+    def make_reservation(self, cust, room_number, check_in, check_out):
         if room_number in self.rooms and not self.is_room_reserved(
             room_number, check_in, check_out
         ):
-            reservation = Reservation(customer, room_number, check_in, check_out)
+            reservation = Reservation(cust, room_number, check_in, check_out)
             self.reservations.append(reservation)
             self.save_to_file()
             return reservation
@@ -120,6 +127,8 @@ class Hotel(AbstractHotel):
             print(f"Error: File '{name}.json' contains invalid JSON.")
         except KeyError as e:
             print(f"Error: Missing key {e} in file '{name}.json'.")
+        except Exception as e:
+            print(f"Unexpected error: {e}")
         return None
 
     def display_info(self):
@@ -148,6 +157,7 @@ class AbstractReservation(ABC):
         """
         Convierte la reserva a un diccionario.
         """
+        pass
 
     @staticmethod
     @abstractmethod
@@ -155,6 +165,7 @@ class AbstractReservation(ABC):
         """
         Crea una reserva a partir de un diccionario.
         """
+        pass
 
 
 class Reservation(AbstractReservation):
@@ -162,8 +173,8 @@ class Reservation(AbstractReservation):
     Clase que representa una reserva.
     """
 
-    def __init__(self, customer, room_number, check_in, check_out):
-        self.customer = customer
+    def __init__(self, cust, room_number, check_in, check_out):
+        self.customer = cust
         self.room_number = room_number
         self.check_in = check_in
         self.check_out = check_out
@@ -192,6 +203,7 @@ class AbstractCustomer(ABC):
         """
         Guarda la información del cliente en un archivo.
         """
+        pass
 
     @staticmethod
     @abstractmethod
@@ -199,24 +211,28 @@ class AbstractCustomer(ABC):
         """
         Carga la información del cliente desde un archivo.
         """
+        pass
 
     @abstractmethod
     def display_info(self):
         """
         Muestra la información del cliente.
         """
+        pass
 
     @abstractmethod
     def modify_info(self, name=None, email=None):
         """
         Modifica la información del cliente.
         """
+        pass
 
     @abstractmethod
     def to_dict(self):
         """
         Convierte el cliente a un diccionario.
         """
+        pass
 
     @staticmethod
     @abstractmethod
@@ -224,6 +240,7 @@ class AbstractCustomer(ABC):
         """
         Crea un cliente a partir de un diccionario.
         """
+        pass
 
 
 class Customer(AbstractCustomer):
@@ -252,6 +269,8 @@ class Customer(AbstractCustomer):
             print(f"Error: File '{name}.json' contains invalid JSON.")
         except KeyError as e:
             print(f"Error: Missing key {e} in file '{name}.json'.")
+        except Exception as e:
+            print(f"Unexpected error: {e}")
         return None
 
     def display_info(self):
@@ -276,8 +295,8 @@ class Customer(AbstractCustomer):
 # En accion
 if __name__ == "__main__":
     # Crear un hotel
-    new_hotel = Hotel("Grand Hotel", "New York", [101, 102, 103, 104, 105])
-    new_hotel.save_to_file()
+    hotel = Hotel("Grand Hotel", "New York", [101, 102, 103, 104, 105])
+    hotel.save_to_file()
 
     # Cargar un hotel
     loaded_hotel = Hotel.load_from_file("Grand Hotel")
@@ -285,8 +304,8 @@ if __name__ == "__main__":
         loaded_hotel.display_info()
 
     # Crear un cliente
-    new_customer = Customer("John Doe", "john.doe@example.com")
-    new_customer.save_to_file()
+    cust = Customer("John Doe", "john.doe@example.com")
+    cust.save_to_file()
 
     # Cargar un cliente
     loaded_customer = Customer.load_from_file("John Doe")
@@ -294,19 +313,19 @@ if __name__ == "__main__":
         loaded_customer.display_info()
 
     # Hacer una reserva
-    new_reservation = loaded_hotel.make_reservation(
+    reservation = loaded_hotel.make_reservation(
         loaded_customer, 101, "2025-03-01", "2025-03-05"
     )
-    if new_reservation:
+    if reservation:
         print(
-            f"Reservation successful for {new_reservation.customer.name} in room "
-            f"{new_reservation.room_number}"
+            f"Reservation successful for {reservation.customer.name} in room "
+            f"{reservation.room_number}"
         )
     else:
         print("Reservation failed")
 
     # Cancelar una reserva
-    loaded_hotel.cancel_reservation(new_reservation)
+    loaded_hotel.cancel_reservation(reservation)
     print("Reservation cancelled")
 
 # Añadir una nueva línea al final del archivo

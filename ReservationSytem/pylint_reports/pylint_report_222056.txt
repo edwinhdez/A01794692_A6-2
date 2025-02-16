@@ -1,0 +1,26 @@
+************* Module ReservationSytem.src.reservation_system
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:23:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:30:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:33:33: W0621: Redefining name 'reservation' from outer scope (line 316) (redefined-outer-name)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:37:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:44:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:52:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:59:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:66:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:84:12: W0621: Redefining name 'reservation' from outer scope (line 316) (redefined-outer-name)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:99:33: W0621: Redefining name 'reservation' from outer scope (line 316) (redefined-outer-name)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:119:16: W0621: Redefining name 'hotel' from outer scope (line 298) (redefined-outer-name)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:130:15: W0718: Catching too general exception Exception (broad-exception-caught)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:160:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:168:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:206:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:214:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:221:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:228:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:235:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:243:8: W0107: Unnecessary pass statement (unnecessary-pass)
+c:\git\TecMonterrrey\QualitySoftware\A01794692_A6-2\ReservationSytem\src\reservation_system.py:272:15: W0718: Catching too general exception Exception (broad-exception-caught)
+
+------------------------------------------------------------------
+Your code has been rated at 8.65/10 (previous run: 8.46/10, +0.19)
+
