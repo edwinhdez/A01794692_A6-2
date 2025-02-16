@@ -1,0 +1,8 @@
+Name                                                Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------------------
+ReservationSytem\__init__.py                            0      0   100%
+ReservationSytem\src\__init__.py                        0      0   100%
+ReservationSytem\src\reservation_system.py            165     49    70%   11, 15, 19, 23, 28, 32, 36, 52, 83-84, 87-90, 93-99, 104, 109, 134, 139, 143, 147, 151, 156, 177-178, 181-182, 204-230
+ReservationSytem\tests\test_reservation_system.py      70      1    99%   90
+---------------------------------------------------------------------------------
+TOTAL                                                 235     50    79%

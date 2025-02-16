@@ -1,0 +1,15 @@
+Name                                                Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------------------
+ReservationSytem\__init__.py                            0      0   100%
+ReservationSytem\src\__init__.py                        0      0   100%
+ReservationSytem\src\reservation_system.py            165     35    79%   11, 15, 19, 23, 28, 32, 36, 83-84, 104, 109, 134, 139, 143, 147, 151, 156, 177-178, 204-230
+ReservationSytem\tests\test_reservation_system.py      82      1    99%   107
+---------------------------------------------------------------------------------
+TOTAL                                                 247     36    85%
+
+Cambios:
+
+>>Explicación de las Nuevas Pruebas
+test_make_reservation_room_already_reserved: Prueba que intenta hacer una reserva en una habitación ya reservada.
+test_display_info (Hotel y Customer): Prueba que llama al método display_info para asegurarse de que se ejecuta sin errores.
+test_modify_info (Hotel): Prueba que modifica la información del hotel y verifica que los cambios se hayan aplicado correctamente.

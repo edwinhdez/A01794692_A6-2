@@ -1,0 +1,19 @@
+{
+    "name": "Updated Hotel",
+    "location": "Updated Location",
+    "rooms": [
+        201,
+        202
+    ],
+    "reservations": [
+        {
+            "customer": {
+                "name": "Test Customer",
+                "email": "test@example.com"
+            },
+            "room_number": 101,
+            "check_in": "2025-03-01",
+            "check_out": "2025-03-05"
+        }
+    ]
+}
