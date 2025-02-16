@@ -7,7 +7,7 @@ def run_flake8():
         # Generar el nombre del archivo con el sufijo de fecha y hora
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        output_dir = os.path.join(script_dir, '..', 'flake8_reports')
+        output_dir = os.path.join(script_dir, '..', '..', 'flake8_reports')
         output_file = os.path.join(output_dir, f"flake8_issues_{timestamp}.txt")
         
         # Crear el directorio si no existe
