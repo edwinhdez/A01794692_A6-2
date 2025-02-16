@@ -100,10 +100,10 @@ print("Reservation cancelled")
 ```
 
 ## Estructura de Archivos
-- `**reservation_system.py:** Contiene la implementación de las clases abstractas y concretas para el sistema de reservas.`
+1. **reservation_system.py:** Contiene la implementación de las clases abstractas y concretas para el sistema de reservas.
+2. **data/:** Carpeta donde se almacenan los archivos JSON con la información de los hoteles y clientes.
 
-data/: Carpeta donde se almacenan los archivos JSON con la información de los hoteles y clientes.
-Requisitos
-Python 3.x
-Biblioteca json
-Biblioteca abc
+## Requisitos
+- `Python 3.x`
+- `Biblioteca json`
+- `Biblioteca abc`
