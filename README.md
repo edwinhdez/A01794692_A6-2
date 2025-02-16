@@ -103,7 +103,37 @@ print("Reservation cancelled")
 1. **reservation_system.py:** Contiene la implementación de las clases abstractas y concretas para el sistema de reservas.
 2. **data/:** Carpeta donde se almacenan los archivos JSON con la información de los hoteles y clientes.
 
+ReservationSytem/ ├── flake8_reports/ │ └── flake8_issues_YYYYMMDD_HHMMSS.txt ├── src/ │ ├── reservation_system.py │ └── utils/ │ └── run_flake8.py └── tests/ └── test_reservation_system.py
+
 ## Requisitos
-- `Python 3.x`
-- `Biblioteca json`
-- `Biblioteca abc`
+
+- Python 3.8+
+- Poetry (para la gestión de dependencias)
+
+## Instalación
+
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/tu_usuario/ReservationSytem.git
+    cd ReservationSytem
+    ```
+
+2. Instala las dependencias:
+    ```bash
+    poetry install
+    ```
+
+## Ejecución de Pruebas
+
+Para ejecutar las pruebas unitarias, usa el siguiente comando:
+
+```bash
+python -m unittest ReservationSytem/tests/test_reservation_system.py
+```
+
+## Análisis de Código con flake8
+```bash
+python ReservationSytem/src/utils/run_flake8.py
+```
+El informe se guardará en el directorio flake8_reports con un nombre de archivo que incluye la fecha y hora de ejecución.
+
