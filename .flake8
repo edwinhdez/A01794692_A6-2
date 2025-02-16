@@ -1,0 +1,11 @@
+[flake8]
+max-line-length = 150
+exclude = 
+    .venv,
+    __pycache__,
+    build,
+    dist
+    ReservationSystem\src\utils\run_flake8.py
+    ReservationSystem\src\utils\run_pytlint.py
+    .\ReservationSytem\src\utils\run_flake8.py
+    .\ReservationSytem\src\utils\run_pytlint.py

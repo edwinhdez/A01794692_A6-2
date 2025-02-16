@@ -1,11 +1,12 @@
 import unittest
 import os
-import json
 import sys
+
 # Añadir el directorio padre de ReservationSytem al PYTHONPATH
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from ReservationSytem.src.reservation_system import Hotel, Reservation, Customer, DATA_FOLDER
+
 
 class TestHotel(unittest.TestCase):
     def setUp(self):
@@ -69,6 +70,7 @@ class TestHotel(unittest.TestCase):
         self.assertEqual(self.hotel.location, "Updated Location")
         self.assertEqual(self.hotel.rooms, [201, 202])
 
+
 class TestCustomer(unittest.TestCase):
     def setUp(self):
         self.customer = Customer("Test Customer", "test@example.com")
@@ -109,6 +111,7 @@ class TestCustomer(unittest.TestCase):
     def test_display_info(self):
         self.customer.display_info()
 
+
 class TestReservation(unittest.TestCase):
     def setUp(self):
         self.customer = Customer("Test Customer", "test@example.com")
@@ -124,6 +127,7 @@ class TestReservation(unittest.TestCase):
         new_reservation = Reservation.from_dict(res_dict)
         self.assertEqual(new_reservation.customer.name, "Test Customer")
         self.assertEqual(new_reservation.room_number, 101)
+
 
 if __name__ == '__main__':
     unittest.main()

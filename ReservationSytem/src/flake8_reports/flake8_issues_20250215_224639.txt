@@ -1,0 +1,9 @@
+flake8 found issues:
+.\ReservationSytem\src\utils\run_pytlint.py:22:54: W292 no newline at end of file
+.\ReservationSytem\tests\test_reservation_system.py:3:1: F401 'json' imported but unused
+.\ReservationSytem\tests\test_reservation_system.py:8:1: E402 module level import not at top of file
+.\ReservationSytem\tests\test_reservation_system.py:10:1: E302 expected 2 blank lines, found 1
+.\ReservationSytem\tests\test_reservation_system.py:72:1: E302 expected 2 blank lines, found 1
+.\ReservationSytem\tests\test_reservation_system.py:112:1: E302 expected 2 blank lines, found 1
+.\ReservationSytem\tests\test_reservation_system.py:128:1: E305 expected 2 blank lines after class or function definition, found 1
+.\ReservationSytem\tests\test_reservation_system.py:129:20: W292 no newline at end of file
