@@ -49,6 +49,17 @@ class TestHotel(unittest.TestCase):
         self.assertIsNotNone(loaded_hotel)
         self.assertEqual(loaded_hotel.name, "Test Hotel")
 
+    def test_load_from_file_not_found(self):
+        loaded_hotel = Hotel.load_from_file("NonExistentHotel")
+        self.assertIsNone(loaded_hotel)
+
+    def test_load_from_file_invalid_json(self):
+        with open(os.path.join(DATA_FOLDER, 'InvalidHotel.json'), 'w') as file:
+            file.write("Invalid JSON")
+        loaded_hotel = Hotel.load_from_file("InvalidHotel")
+        self.assertIsNone(loaded_hotel)
+        os.remove(os.path.join(DATA_FOLDER, 'InvalidHotel.json'))
+
     def test_display_info(self):
         self.hotel.display_info()
 
@@ -78,6 +89,17 @@ class TestCustomer(unittest.TestCase):
         loaded_customer = Customer.load_from_file("Test Customer")
         self.assertIsNotNone(loaded_customer)
         self.assertEqual(loaded_customer.name, "Test Customer")
+
+    def test_load_from_file_not_found(self):
+        loaded_customer = Customer.load_from_file("NonExistentCustomer")
+        self.assertIsNone(loaded_customer)
+
+    def test_load_from_file_invalid_json(self):
+        with open(os.path.join(DATA_FOLDER, 'InvalidCustomer.json'), 'w') as file:
+            file.write("Invalid JSON")
+        loaded_customer = Customer.load_from_file("InvalidCustomer")
+        self.assertIsNone(loaded_customer)
+        os.remove(os.path.join(DATA_FOLDER, 'InvalidCustomer.json'))
 
     def test_modify_info(self):
         self.customer.modify_info(name="Updated Customer", email="updated@example.com")

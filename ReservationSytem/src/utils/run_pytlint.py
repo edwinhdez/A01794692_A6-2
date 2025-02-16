@@ -1,26 +1,22 @@
-import subprocess
-import datetime
 import os
+import subprocess
+import time
 
-def run_pylint():
-    # Obtener la fecha y hora actuales
-    now = datetime.datetime.now()
-    timestamp = now.strftime("%Y%m%d_%H%M%S")
+# Definir el folder de resultados de pylint
+pylint_reports_folder = os.path.join(os.path.dirname(__file__), '..', '..', 'pylint_reports')
+os.makedirs(pylint_reports_folder, exist_ok=True)
 
-    # Nombre del archivo de resultados
-    output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../pylint_reports'))
-    os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f"pylint_report_{timestamp}.txt")
+# Obtener la hora actual para el sufijo del archivo
+current_time = time.strftime("%H%M%S")
 
-    # Ruta al archivo computeStatistics.py
-    script_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-    script_path = os.path.join(script_dir, 'compute_statistics.py')
+# Nombre del archivo de resultados
+pylint_report_file = os.path.join(pylint_reports_folder, f'pylint_report_{current_time}.txt')
 
-    # Ejecutar pylint y guardar los resultados en el archivo
-    with open(output_file, "w") as f:
-        subprocess.run(["pylint", script_path], stdout=f, stderr=subprocess.STDOUT)
+# Ruta absoluta del archivo a verificar
+file_to_check = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'reservation_system.py'))
 
-    print(f"Pylint report saved to {output_file}")
+# Ejecutar pylint y guardar los resultados en el archivo
+with open(pylint_report_file, 'w') as report_file:
+    subprocess.run(['pylint', file_to_check], stdout=report_file, stderr=report_file)
 
-if __name__ == "__main__":
-    run_pylint()
+print(f'Pylint report saved to {pylint_report_file}')
